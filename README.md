@@ -1,39 +1,15 @@
-# node-js-getting-started
+# API Basejump: File Metadata Microservice
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+A NodeJS App that allows users to upload a file and find out the meta data of the file. The app will respond with a JSON response with the relavant data. This app uses the multer library.
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+You can view the live demo here: https://cryptic-temple-88061.herokuapp.com/
 
-## Running Locally
+### The Web App Does the Following:
+* I can submit a FormData object that includes a file upload.
+* When I submit something, I will receive the file size in bytes within the JSON response
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+Link to the freecodecamp project - https://www.freecodecamp.com/challenges/file-metadata-microservice
 
-```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
+## Deploy On Heroku
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+To deploy the app to Heroku just click on this button here: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
