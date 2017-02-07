@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var multer  = require('multer');
 var upload = multer({ dest: 'uploads/' });
+var fs = require('fs');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -16,7 +17,10 @@ app.get('/', function(req, res) {
 });
 
 app.post("/fileInfo", upload.any(), function (req, res) {
-	res.json(req.files[0]);
+  res.json(req.files[0]);
+  // removes the file from the server
+  var filePath = req.files[0].path; 
+  fs.unlinkSync(filePath);
 });
 
 app.listen(app.get('port'), function() {
