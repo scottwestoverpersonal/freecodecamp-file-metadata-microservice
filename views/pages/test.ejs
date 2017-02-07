@@ -6,10 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    <h1 class="header">
+      API Basejump: File Metadata Microservice
+    </h1>
     <form action="/fileInfo" method="post" enctype="multipart/form-data">
       <input type="file" name="fileToUpload" id="fileToUpload">
       <input type="submit" value="Upload" name="submit">
     </form>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <blockquote>
+      User stories:
+      <ul>1) I can submit a FormData object that includes a file upload.</ul>
+      <ul>2) When I submit something, I will receive the file size in bytes within the JSON response</ul>
+    </blockquote>
+		<h3>Example output:</h3>
+    <code>
+    {
+      "fieldname": "fileToUpload",
+      "originalname": "test.txt",
+      "encoding": "7bit",
+      "mimetype": "text/plain",
+      "destination": "uploads/",
+      "filename": "dfe6a25ac7ea79f2ee1253037fc27536",
+      "path": "uploads/dfe6a25ac7ea79f2ee1253037fc27536",
+      "size": 4
+    }
+    </code>
   </body>
 </html>
